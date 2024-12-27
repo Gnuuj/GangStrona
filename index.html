@@ -20,7 +20,7 @@
         .background-box {
             position: absolute;
             width: 450px;
-            height: 600px;
+            height: 800px;
             background: rgba(255, 255, 255, 1);
             border-radius: 10px;
             z-index: 0;
@@ -84,7 +84,7 @@
         footer {
             background: rgba(0, 0, 0, 0.7);
             color: white;
-            padding: 1rem;
+            padding: 0.2rem;
             position: fixed;
             bottom: 0;
             width: 100%;
@@ -126,29 +126,31 @@
     </script>
     <script src="script.js"></script>
 
-
 </head>
 <body>
     <div class="background-box"></div>
     
-    <form onsubmit="sendEmail(event)">
-        <div class="textbox-container">
-            <label class="textbox-label" for="textbox1">E-mail</label>
-            <input type="text" id="email" class="textbox" placeholder="Podaj e-mail">
-        </div>
-        
-        <div class="textbox-container">
-            <label class="textbox-label" for="textbox2">Zamówienie</label>
-            <input type="text" id="textbox2" class="textbox" placeholder="Ilość sztuk">
-        </div>
-        
-        <div class="textbox-container">
-            <label class="textbox-label" for="textbox3">Uwagi</label>
-            <textarea id="message" class="textbox textbox-large" placeholder="Napisz co zmienić"></textarea>
-        </div>
+    <div class="textbox-container">
+        <label class="textbox-label" for="textbox1">E-mail</label>
+        <input type="text" id="email" class="textbox" placeholder="Podaj swój e-mail">
+    </div>
 
-        <button type="submit" onclick-"sendMail()" class="submit-button">Wyślij</button>
-    </form>
+    <div class="textbox-container">
+        <label class="textbox-label" for="textbox1">Imię</label>
+        <input type="text" id="name" class="textbox" placeholder="Podaj swoje imię">
+    </div>
+        
+    <div class="textbox-container">
+        <label class="textbox-label" for="textbox2">Zamówienie</label>
+        <input type="text" id="textbox2" class="textbox" placeholder="Podaj ilość sztuk które planujesz zamówić">
+    </div>
+        
+    <div class="textbox-container">
+        <label class="textbox-label" for="textbox3">Uwagi</label>
+        <textarea id="message" class="textbox textbox-large" placeholder="Napisz co zmienić"></textarea>
+    </div>
+
+    <button type="submit" onclick="sendMail()" class="submit-button">Wyślij</button>
 
     <footer>
         <p>&copy; 2024 Gang Rydzyka. Wszelkie prawa zastrzeżone.</p>
