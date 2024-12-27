@@ -9,18 +9,62 @@
             margin: 0;
             font-family: Arial, sans-serif;
             text-align: center;
-            background-image: url('foto.jpg'); /* Wstaw ścieżkę do swojego obrazu */
-            background-size: cover; /* Dopasowanie obrazu */
-            background-position: center; /* Wycentrowanie */
+            background-image: url('foto.jpg');
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
         }
+        
+        nav {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 1rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        
         h1 {
-            color: white; /* Kolor tekstu */
-            margin-top: 20%;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Efekt cienia */
+            color: white;
+            margin-top: 15%;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+        
+        .content {
+            background: rgba(255, 255, 255, 0.8);
+            margin: 2rem auto;
+            padding: 2rem;
+            max-width: 800px;
+        }
+        
+        footer {
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
 <body>
+    <nav>
+        <a href="#strona-glowna">Strona Główna</a>
+        <a href="#o-mnie">O mnie</a>
+        <a href="#kontakt">Kontakt</a>
+    </nav>
+
     <h1>Witaj na mojej stronie!</h1>
+
+    <div class="content">
+        <h2>O mnie</h2>
+        <p>Tutaj możesz dodać informacje o sobie.</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Moja Strona. Wszelkie prawa zastrzeżone.</p>
+    </footer>
 </body>
 </html>
