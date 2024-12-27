@@ -7,7 +7,7 @@ function sendMail() {
         message : document.getElementById("message").value,
     }
 
-    emailjs.send('service_gfzta6n', 'template_nksjuze', templateParams).then(
+    emailjs.send('service_gfzta6n', 'template_nksjuze', parms).then(
         (response) => {
           console.log('SUCCESS!', response.status, response.text);
         },
