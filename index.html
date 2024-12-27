@@ -17,12 +17,23 @@
             background-position: center;
         }
 
+        .background-box {
+            position: absolute;
+            width: 450px;
+            height: 500px;
+            background: rgba(255, 255, 255, 1);
+            border-radius: 50px;
+            z-index: 0;
+        }
+
         .textbox {
             border: 1px solid #ccc;
             padding: 10px;
             margin: 10px;
             width: 300px;
             background: rgba(255, 255, 255, 0.8);
+            animation: drop 1s ease-out forwards;
+            z-index: 1;
         }
 
         .textbox-container {
@@ -32,12 +43,17 @@
             background: rgba(0, 0, 0, 0.5);
             padding: 20px;
             border-radius: 10px;
+            margin: 10px 0;
+            animation: expand 1s ease-out forwards;
+            z-index: 1;
         }
 
         .textbox-label {
             margin-top: 10px;
             font-weight: bold;
             color: white;
+            animation: drop 1s ease-out forwards;
+            z-index: 1;
         }
 
         footer {
@@ -49,22 +65,50 @@
             width: 100%;
             text-align: center;
         }
+
+        @keyframes drop {
+            0% {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes expand {
+            0% {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
     </style>
 </head>
 <body>
+    <div class="background-box"></div>
+    
     <div class="textbox-container">
         <label class="textbox-label" for="textbox1">E-mail</label>
         <input type="text" id="textbox1" class="textbox" placeholder="Podaj e-mail">
-        
+    </div>
+    
+    <div class="textbox-container">
         <label class="textbox-label" for="textbox2">Zamówienie</label>
         <input type="text" id="textbox2" class="textbox" placeholder="Ilość sztuk">
-        
+    </div>
+    
+    <div class="textbox-container">
         <label class="textbox-label" for="textbox3">Uwagi</label>
         <input type="text" id="textbox3" class="textbox" placeholder="Napisz co zmienić">
     </div>
 
     <footer>
-        <p>&copy; 2024 Gang Rydzyka. Wszelkie prawa zastrzeżone.</p>
+        <p>&copy; 2024 Moja Strona. Wszelkie prawa zastrzeżone.</p>
     </footer>
 </body>
 </html>
