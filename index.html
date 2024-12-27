@@ -113,26 +113,20 @@
             }
         }
     </style>
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
     <script type="text/javascript">
         (function(){
-            emailjs.init("YTD5_BqT9zjY5Xx2L1");
-        })();
-
-        function sendEmail(event) {
-            event.preventDefault();
-
-            emailjs.send("service_gfzta6n", "template_nksjuze", {
-                email: document.getElementById('textbox1').value,
-                order: document.getElementById('textbox2').value,
-                message: document.getElementById('textbox3').value
-            }).then(function(response) {
-                alert('Wiadomość wysłana!', response.status, response.text);
-            }, function(error) {
-                alert('Błąd wysyłania wiadomości.', error);
+            emailjs.init({
+            publicKey: "TD5_BqT9zjY5Xx2L1",
             });
-        }
+        })();
     </script>
+    <script src="script.js"></script>
+
+
 </head>
 <body>
     <div class="background-box"></div>
@@ -140,7 +134,7 @@
     <form onsubmit="sendEmail(event)">
         <div class="textbox-container">
             <label class="textbox-label" for="textbox1">E-mail</label>
-            <input type="text" id="textbox1" class="textbox" placeholder="Podaj e-mail">
+            <input type="text" id="email" class="textbox" placeholder="Podaj e-mail">
         </div>
         
         <div class="textbox-container">
@@ -150,14 +144,14 @@
         
         <div class="textbox-container">
             <label class="textbox-label" for="textbox3">Uwagi</label>
-            <textarea id="textbox3" class="textbox textbox-large" placeholder="Napisz co zmienić"></textarea>
+            <textarea id="message" class="textbox textbox-large" placeholder="Napisz co zmienić"></textarea>
         </div>
 
-        <button type="submit" class="submit-button">Wyślij</button>
+        <button type="submit" onclick-"sendMail()" class="submit-button">Wyślij</button>
     </form>
 
     <footer>
-        <p>&copy; 2024 Moja Strona. Wszelkie prawa zastrzeżone.</p>
+        <p>&copy; 2024 Gang Rydzyka. Wszelkie prawa zastrzeżone.</p>
     </footer>
 </body>
 </html>
